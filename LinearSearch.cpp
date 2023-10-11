@@ -6,7 +6,7 @@ int LinearSearch(int *arr,int val){
             return i;
         }
     }
-    return 0;
+    return -1;
 }
 int main(){
     int a[4]={1,2,3,4};
