@@ -10,7 +10,7 @@ int search(int *arr,int bheight){
     while(rn<bheight){
         rn+= lim;
         if(arr[rn]){
-            for(i=rn;i>0;i--){
+            for(i=rn;i>=0;i--){
                 if(!(arr[i])){
                 return i+1;
                 
@@ -19,7 +19,7 @@ int search(int *arr,int bheight){
         
        } 
     }
-return -1; 
+    return -1; 
 }
 int main(){
     int a[15]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
