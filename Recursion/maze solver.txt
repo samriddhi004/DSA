@@ -1,0 +1,7 @@
+base cases:
+* its a wall
+* off the map
+* its at end point
+* visits same  location twice
+recursive case:
+top right bottom left
