@@ -75,11 +75,11 @@ bool mazesolver(char** maze,char wall, point current_pnt, point end_pnt,int rows
 
 int main(){
     char maze[5][5]={
-        { 'S', ' ', ' ', 'W', ' ' },
-        { 'W', 'W', ' ', ' ', ' ' },
-        { 'W', ' ', ' ', 'W', ' ' },
+        { 'S', ' ', ' ', '#', ' ' },
+        { '#', '#', ' ', ' ', ' ' },
+        { '#', ' ', ' ', '#', 'E' },
         { ' ', ' ', ' ', ' ', ' ' },
-        { 'W', 'W', 'E', 'W', 'W' }
+        { '#', '#', '#', '#', '#' }
     };
     int rows=5,cols=5;
     char** mazeptr = new char*[rows];
@@ -93,7 +93,7 @@ int main(){
 
     point current_pnt(0,0);
     point end_pnt(2,4);
-    mazesolver(mazeptr,'W',current_pnt,end_pnt,rows,cols);
+    mazesolver(mazeptr,'#',current_pnt,end_pnt,rows,cols);
 
     for(int i=0;i<cols;i++){
         delete[] mazeptr[i];
